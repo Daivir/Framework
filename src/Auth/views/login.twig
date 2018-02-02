@@ -1,0 +1,22 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+<div class="row justify-content-md-center">
+	<div class="col-sm-4">
+		<div class="card mt-3">
+			<div class="card-body">
+				<form action="{{ path('auth.login') }}" method="POST">
+					{{ csrf_input() }}
+					{{ field('username', null, 'Username') }}
+					{{ field('password', null, 'Password', {type: 'password'}) }}
+					<a href="{{ path('auth.password') }}">Forgot password?</a>
+					<button class="btn btn-success btn-material">Log In</button>
+					<a class="nav-link" href="{{ path('account.signup') }}">SIGN UP</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

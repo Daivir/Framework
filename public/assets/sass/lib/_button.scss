@@ -1,0 +1,42 @@
+@keyframes clickeffect {
+	from {
+		opacity: 0.75;
+		transform: scale(0.2);
+	}
+	to {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+.btn-material {
+	position: relative;
+	font-weight: lighter;
+	overflow: hidden;
+	border: 0;
+}
+
+.btn-material:active {
+	box-shadow: none!important;
+}
+
+a.btn-material {
+	height: 37px;
+	padding: 7px 0;
+}
+
+button.btn-material {
+}
+
+.effect {
+	margin: -100px;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.5);
+	transform: scale(0);
+	animation: clickeffect 1.2s ease;
+	-webkit-animation: clickeffect 1.2s ease;
+	-moz-animation: clickeffect 1.2s ease;
+}

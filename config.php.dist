@@ -1,0 +1,8 @@
+<?php
+
+return [
+
+    'stripe.key.public' => '',
+    'stripe.key.secret' => ''
+
+];

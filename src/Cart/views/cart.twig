@@ -1,0 +1,54 @@
+<table class="table table-striped table-bordered table-responsive-lg mt-3 border-0">
+	<thead>
+	<tr>
+		<th class="text-center">Product</th>
+		<th class="text-center">Quantity</th>
+		<th class="text-right">Price</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for row in cart.rows %}
+		<tr>
+			<td>{{ row.product.name }}</td>
+			<td width="108">
+				{% if noform %}
+					{{ row.quantity }}
+				{% else %}
+					<form action="{{ path('cart.edit', {id: row.product.id}) }}" method="post" class="form-inline">
+						{{ csrf_input() }}
+						<div class="input-group">
+							<input
+								title="quantity"
+								type="number"
+								class="form-control form-control-sm"
+								name="quantity"
+								value="{{ row.quantity }}"
+								style="width: 3.5rem;"/>
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-sm btn-primary">
+									<i class="zmdi zmdi-refresh"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				{% endif %}
+			</td>
+			<td class="text-right" width="120">{{ row.product.price | price_format }}</td>
+		</tr>
+	{% endfor %}
+	<tr>
+		<td colspan="2" class="border-0 text-right">
+			Subtotal ({{ cart.count }} item{% if cart.count > 0 %}s{% endif %})
+		</td>
+		<td class="text-right">{{ cart.price | price_format }}</td>
+	</tr>
+	{% if vat > 0 %}
+		<tr>
+			<td colspan="2" class="border-0 text-right" style="background-color: white;">
+				Total VAT ({{ vat | price_format('%') }})
+			</td>
+			<td class="text-right">{{ price | price_format }}</td>
+		</tr>
+	{% endif %}
+	</tbody>
+</table>

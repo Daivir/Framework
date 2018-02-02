@@ -1,0 +1,33 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+<div class="row">
+	<div class="col-lg-6">
+		{% include '@cart/cart.twig' with {vat: vat, noform: true} %}
+	</div>
+	<div class="col-lg-6">
+		<div class="card mt-3">
+			<div class="card-body">
+				{{ card.brand }} <br>
+				**** **** **** {{ card.last4 }} <br>
+				Products:
+				<ul>
+				{% for row in cart.rows %}
+					<li> - {{ row.product.name }} x{{ row.quantity }}</li>
+				{% endfor %}
+				</ul>
+				Price: {{ cart.price | price_format }}<br>
+				VAT: {{ vat | number_format(2, ',', ' ') }}% <br>
+				Price VAT: {{ price | price_format }}
+				<form action="{{ path('cart.order.process', {id: cart.id}) }}" method="POST">
+					{{ csrf_input() }}
+					<input type="hidden" name="stripeToken" value="{{ stripeToken }}">
+					<button class="btn btn-success">Confirm payment</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

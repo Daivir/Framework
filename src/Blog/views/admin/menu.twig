@@ -1,0 +1,13 @@
+<li>
+    <a class="nav-link {{ is_subpath('blog.admin.index') ? 'active' }}"
+       href="{{ path('blog.admin.index') }}">
+        Posts
+    </a>
+</li>
+<li>
+    <a class="nav-link {{ is_subpath('blog.category.admin.index') ? 'active' }}"
+       href="{{ path('blog.category.admin.index') }}">
+        Categories
+    </a>
+</li>
+<li>

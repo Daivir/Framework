@@ -1,0 +1,27 @@
+{% if flash('success') %}
+    <div class="alert alert-success fade show" role="alert">
+        {{ flash('success') }}
+        <a href="#" class="alert-close" data-dismiss="alert"><i class="zmdi zmdi-close zmdi-hc-lg"></i></a>
+    </div>
+{% endif %}
+
+{% if flash('info') %}
+    <div class="alert alert-info fade show" role="alert">
+        {{ flash('info') }}
+        <a href="#" class="alert-close" data-dismiss="alert"><i class="zmdi zmdi-close zmdi-hc-lg"></i></a>
+    </div>
+{% endif %}
+
+{% if flash('warning') %}
+    <div class="alert alert-warning fade show" role="alert">
+        {{ flash('warning') }}
+        <a href="#" class="alert-close" data-dismiss="alert"><i class="zmdi zmdi-close zmdi-hc-lg"></i></a>
+    </div>
+{% endif %}
+
+{% if flash('danger') %}
+    <div class="alert alert-danger fade show" role="alert">
+        {{ flash('danger') }}
+        <a href="#" class="alert-close" data-dismiss="alert"><i class="zmdi zmdi-close zmdi-hc-lg"></i></a>
+    </div>
+{% endif %}

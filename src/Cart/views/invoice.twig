@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		body {
+			font-family: Roboto, sans-serif;
+			font-size: .875rem;
+			background-color: white;
+			position:relative;
+		}
+		table {
+			border-collapse: collapse;
+		}
+		h1 {padding:0;margin:1rem;font-weight:lighter;}
+		h4 {margin: 0; padding:0;font-size:1.15rem;}
+		header > h1 {color:gray;float:right;}
+		.address.from {
+			display: inline-block;
+			margin: 1rem;
+		}
+		.address.to {
+			margin: 1rem;
+			width:25%;
+		}
+		.address.to .label {
+			border: 1px solid black;
+			padding: .25rem .5rem;
+			background-color:#d3d3d3;
+			font-weight: bolder;
+		}
+		.address.to .content {
+			padding: 0 .25rem;
+		}
+		.clear {
+			margin: 1rem 0;
+		}
+		.info {
+			position:absolute;
+			top:4rem;
+			right:1rem;
+		}
+		.info th {
+			background: #d3d3d3;
+		}
+		.items {
+			padding: 0 1rem;
+			border:none;
+			width:100%;
+		}
+		.text-right {
+			text-align: right;
+		}
+		.text-center {
+			text-align: center;
+		}
+		.total > td {
+			border: 0;
+			background-color: white;
+		}
+		.total.total-big {
+			font-size: 1.2rem;
+		}
+		.items th {
+			border-top: 0;
+		}
+		.items td, .items th {
+			padding:.5rem;
+			border-color: #d3d3d3;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1>INVOICE</h1>
+	<div class="address from">
+		<h4>[Company Name]</h4>
+		[Street Address]<br>
+		42000 Saint-Étienne<br>
+		SIRET: ____________
+	</div>
+	<div class="address to">
+		<div class="label">BILL TO</div>
+		<div class="content">
+			{% if user.firstname and user.lastname %}<strong>{{ user.firstname }} {{ user.lastname }}</strong>
+			{% else %}<strong>{{ user.username }}</strong>{% endif %}
+			<br>
+			{{ user.email }}
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="info">
+		<table cellspacing="0" cellpadding="4" border="1">
+			<thead>
+			<tr>
+				<th>Invoice #</th>
+				<th>Issued On</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td class="definition">
+					INVOICE-{{ order.createdAt.format('Y') }}-{{ order.id }}
+				</td>
+				<td class="definition">{{ order.createdAt.format('d/m/Y') }}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="clear"></div>
+
+	<table class="items" cellspacing="0" border="1" cellpadding="4">
+		<thead>
+		<tr>
+			<th>Description</th>
+			<th width="75">Unit price</th>
+			<th width="50">Quantity</th>
+			<th width="120">Price</th>
+			<th width="105">Price VAT</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for row in order.rows %}
+		<tr>
+			<td>{{ row.product.name }}</td>
+			<td class="text-right">{{ row.price | price_format }}</td>
+			<td class="text-center">{{ row.quantity }}</td>
+			<td class="text-right">{{ (row.price * row.quantity) | price_format }}</td>
+			<td class="text-right">{{ vat((row.price * row.quantity), order.vat) | number_format(2, '.', ',') }}€</td>
+		</tr>
+		{% endfor %}
+		<tr class="total total-first">
+			<td class="label text-right" colspan="4">Sub Total</td>
+			<td class="text-right">
+				<strong>{{ order.price | price_format }}</strong>
+			</td>
+		</tr>
+		<tr class="total tax">
+			<td class="label text-right" colspan="4">Tax ({{ order.vat }}%)</td>
+			<td class="text-right">
+				<strong>{{ vat_only(order.price, order.vat) | price_format }}</strong>
+			</td>
+		</tr>
+		<tr class="total total-big">
+			<td class="label text-right" colspan="4">Total VAT</td>
+			<td class="text-right">
+				<strong>{{ vat(order.price, order.vat) | price_format }}</strong>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</main>
+<hr>
+<footer>
+	Legals mentions: Lorem ipsum...
+</footer>
+<script>
+    /*window.print()
+    window.close()*/
+</script>
+</body>
+</html>

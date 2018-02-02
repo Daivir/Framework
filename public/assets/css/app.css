@@ -1,0 +1,328 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css");
+/* line 5, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Applications/Ruby/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@keyframes clickeffect {
+  from {
+    opacity: 0.75;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+/* line 12, ../sass/lib/_button.scss */
+.btn-material {
+  position: relative;
+  font-weight: lighter;
+  overflow: hidden;
+  border: 0;
+}
+
+/* line 19, ../sass/lib/_button.scss */
+.btn-material:active {
+  box-shadow: none !important;
+}
+
+/* line 23, ../sass/lib/_button.scss */
+a.btn-material {
+  height: 37px;
+  padding: 7px 0;
+}
+
+/* line 31, ../sass/lib/_button.scss */
+.effect {
+  margin: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: clickeffect 1.2s ease;
+  -webkit-animation: clickeffect 1.2s ease;
+  -moz-animation: clickeffect 1.2s ease;
+}
+
+/* line 14, ../sass/app.scss */
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+/* line 18, ../sass/app.scss */
+a {
+  color: #5ba3df;
+}
+/* line 20, ../sass/app.scss */
+a:hover {
+  color: #277ec7;
+  text-decoration: none;
+}
+
+/* line 26, ../sass/app.scss */
+article {
+  padding-top: 1rem;
+}
+
+/* line 30, ../sass/app.scss */
+button {
+  cursor: pointer;
+}
+
+/* line 34, ../sass/app.scss */
+img {
+  vertical-align: bottom;
+}
+
+/* line 38, ../sass/app.scss */
+nav.navbar-dark a.nav-item {
+  color: white;
+  opacity: .5;
+}
+/* line 17, ../sass/_mixins.scss */
+nav.navbar-dark a.nav-item:hover {
+  opacity: .75;
+}
+/* line 20, ../sass/_mixins.scss */
+nav.navbar-dark a.nav-item[aria-expanded="true"], nav.navbar-dark a.nav-item .active {
+  opacity: 1;
+}
+
+/* line 43, ../sass/app.scss */
+nav.navbar-light a.nav-item {
+  color: black;
+  opacity: .5;
+}
+/* line 17, ../sass/_mixins.scss */
+nav.navbar-light a.nav-item:hover {
+  opacity: .75;
+}
+/* line 20, ../sass/_mixins.scss */
+nav.navbar-light a.nav-item[aria-expanded="true"], nav.navbar-light a.nav-item .active {
+  opacity: 1;
+}
+
+/* line 48, ../sass/app.scss */
+.btn {
+  font-size: inherit;
+}
+/* line 50, ../sass/app.scss */
+.btn:focus {
+  box-shadow: none;
+}
+
+/* line 55, ../sass/app.scss */
+.alert {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 0;
+  padding: 1rem 1.25rem;
+}
+
+/* line 63, ../sass/app.scss */
+.card-body {
+  padding: .875rem;
+}
+
+/* line 67, ../sass/app.scss */
+.pagination {
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* line 74, ../sass/app.scss */
+h1 {
+  color: #282c34;
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 2rem;
+}
+
+/* line 74, ../sass/app.scss */
+h2 {
+  color: #282c34;
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 1.8rem;
+}
+
+/* line 74, ../sass/app.scss */
+h3 {
+  color: #282c34;
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 1.6rem;
+}
+
+/* line 74, ../sass/app.scss */
+h4 {
+  color: #282c34;
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 1.4rem;
+}
+
+/* line 74, ../sass/app.scss */
+h5 {
+  color: #282c34;
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 1.2rem;
+}
+
+/* line 74, ../sass/app.scss */
+h6 {
+  color: #282c34;
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+/* line 82, ../sass/app.scss */
+.color-primary {
+  color: #282c34 !important;
+}
+/* line 84, ../sass/app.scss */
+.color-primary-dark {
+  color: #070709 !important;
+}
+/* line 85, ../sass/app.scss */
+.color-primary-light {
+  color: #49515f !important;
+}
+
+/* line 88, ../sass/app.scss */
+.color-secondary {
+  color: #5ba3df !important;
+}
+/* line 90, ../sass/app.scss */
+.color-secondary-dark {
+  color: #277ec7 !important;
+}
+/* line 91, ../sass/app.scss */
+.color-secondary-light {
+  color: #9bc7eb !important;
+}
+
+/* line 94, ../sass/app.scss */
+.bg-primary {
+  color: white !important;
+  background-color: #282c34 !important;
+}
+/* line 97, ../sass/app.scss */
+.bg-primary-dark {
+  color: white !important;
+  background-color: #070709 !important;
+}
+/* line 98, ../sass/app.scss */
+.bg-primary-light {
+  color: white !important;
+  background-color: #49515f !important;
+}
+
+/* line 101, ../sass/app.scss */
+.bg-secondary {
+  color: white !important;
+  background-color: #5ba3df !important;
+}
+/* line 104, ../sass/app.scss */
+.bg-secondary-dark {
+  color: white !important;
+  background-color: #277ec7 !important;
+}
+/* line 105, ../sass/app.scss */
+.bg-secondary-light {
+  color: black !important;
+  background-color: #9bc7eb !important;
+}
+
+/* line 108, ../sass/app.scss */
+td {
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 113, ../sass/app.scss */
+.center-align-fix {
+  display: flex;
+  align-items: center;
+}
+
+/* line 118, ../sass/app.scss */
+#login-btn {
+  color: #277ec7;
+}
+/* line 120, ../sass/app.scss */
+#login-btn:hover {
+  color: #5ba3df;
+}
+/* line 121, ../sass/app.scss */
+#login-btn:focus {
+  background-color: #49515f;
+}

@@ -1,0 +1,57 @@
+{% extends '@admin/layout.twig' %}
+
+{% block title "Edit posts" %}
+
+{% block body %}
+
+<div class="block-title">
+    <div>Dashboards</div>
+    <h2>Posts</h2>
+</div>
+
+<hr>
+
+<div class="text-left" style="width:100%;padding:0 0 1rem 1rem;">
+    <a class="btn btn-success btn-sm cst-btn" href="{{ path(routePrefix ~ '.create', {id: item.id}) }}">
+        <i class="fa fa-plus"></i> Create
+    </a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% set token_input = csrf_input() %}
+        {% for item in items %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description | excerpt }}</td>
+            <td>{{ item.price | price_format }}</i></td>
+            <td>
+                <a class="btn btn-primary btn-sm cst-btn" href="{{ path(routePrefix ~ '.edit', {id: item.id}) }}">
+                    <i class="fa fa-pencil"></i> Edit
+                </a>
+                <form action="{{ path(routePrefix ~ '.delete', {id: item.id}) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Are you sure?')">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn btn-danger btn-sm cst-btn" href="#">
+                        <i class="fa fa-times"></i> Delete
+                    </button>
+                    {{ token_input | raw }}
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{{ paginate(items, routePrefix ~ '.index') }}
+
+{% endblock %}

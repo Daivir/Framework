@@ -1,0 +1,40 @@
+{% extends 'layout.twig' %}
+
+{% block title 'My orders' %}
+
+{% block body %}
+
+<table class="table table-stripe">
+	<thead>
+	<tr>
+		<th>Product name</th>
+		<th>Price</th>
+		<th>Purchase date</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for order in orders %}
+		<tr>
+			<td>
+				<ul>
+					{% for row in order.rows %}
+						<li>{{ row.product.name }} x{{ row.quantity  }}</li>
+					{% endfor %}
+				</ul>
+			</td>
+			<td>{{ order.price | price_format }}</td>
+			<td>{{ order.createdAt.format('d/m/Y H:i') }}</td> {# TODO: improve date format like posts #}
+			<td>
+				<a target="_blank" href="{{ path('cart.order.invoice', {id: order.getId}) }}" class="btn bg-secondary">
+					<i class="zmdi zmdi-download zmdi-hc-fw"></i>Invoice
+				</a>
+			</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+{{ paginate(orders, 'cart.orders') }}
+
+{% endblock %}

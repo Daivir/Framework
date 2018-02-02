@@ -1,0 +1,48 @@
+{% extends '@admin/layout.twig' %}
+
+{% block title "Edit posts" %}
+
+{% block body %}
+
+	<div class="block-title">
+		<div>Dashboards</div>
+		<h2>Posts</h2>
+	</div>
+
+	<hr>
+
+	<a href="{{ path(routePrefix ~ '.create', {id: item.id}) }}">
+		<i class="fa fa-plus"></i> Create
+	</a>
+
+	<table class="table table-bordered">
+		<thead>
+		<tr>
+			<th>Title</th>
+			<th>Category</th>
+			<th>Actions</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% set token_input = csrf_input() %}
+		{% for item in items %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.categoryName }}</td>
+				<td>
+					<a href="{{ path(routePrefix ~ '.edit', {id: item.id}) }}">Edit</a>
+					<form action="{{ path(routePrefix ~ '.delete', {id: item.id}) }}" method="POST" style="display: inline-block;"
+								onsubmit="return confirm('Are you sure?')">
+						<input type="hidden" name="_method" value="DELETE">
+						<button type="submit">Delete</button>
+						{{ token_input | raw }}
+					</form>
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+
+	{{ paginate(items, routePrefix ~ '.index') }}
+
+{% endblock %}

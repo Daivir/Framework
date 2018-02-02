@@ -1,0 +1,27 @@
+{{ csrf_input() }}
+<div class="row">
+    <div class="col-md-4">
+        {{ field('name', item.name, "Title") }}
+    </div>
+    <div class="col-md-4">
+        {{ field('category_id', item.categoryId, "Category", {options: categories, class: 'custom-select'}) }}
+    </div>
+    <div class="col-md-4">
+        {{ field('published', item.published, "Public", {type: 'checkbox'}) }}
+    </div>
+</div>
+<div class="row">
+        <div class="col-md-4 thumb">
+            {% if item.image %}
+                <img src="{{ item.thumb }}" alt="" style="width:100%;">
+            {% endif %}
+        </div>
+    <div class="col-md-4">
+        {{ field('image', item.image, "Image", {type: 'file'}) }}
+    </div>
+    <div class="col-md-4">
+        {{ field('slug', item.slug, "Link name") }}
+    </div>
+</div>
+{{ field('content', item.content, "Content", {type: 'textarea'}) }}
+{{ field('created_at', item.createdAt, "Created at", {class: 'datepicker'}) }}

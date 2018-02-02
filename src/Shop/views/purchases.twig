@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+	<table class="table table-stripe">
+		<thead>
+			<tr>
+				<th>Product name</th>
+				<th>Purchase date</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for purchase in purchases %}
+				<tr>
+					<td>{{ purchase.productName }}</td>
+					<td>{{ purchase.createdAt.format('d/m/Y H:i') }}</td> {# TODO: improve date format like posts #}
+					<td>
+						<a target="_blank" class="btn btn-success" href="{{ path('shop.download', {id: purchase.productId})
+						}}">Downloads</a>
+						<a target="_blank" href="{{ path('shop.invoice', {id: purchase.getId}) }}" class="btn btn-light">Invoice</a>
+					</td>
+				</tr>
+				{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}

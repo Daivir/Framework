@@ -1,0 +1,13 @@
+.sass-cache
+composer.lock
+public/uploads
+public/downloads
+views/dev
+tmp
+vendor
+/config.php
+/test.html
+composer.phar
+
+# For Macintosh users
+.DS_Store

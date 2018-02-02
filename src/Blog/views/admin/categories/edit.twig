@@ -1,0 +1,22 @@
+{% extends '@admin/layout.twig' %}
+
+{% block title 'Edit ' ~ item.name %}
+
+{% block body %}
+
+<div style="width:100%;">
+    <div class="asv" style="color:#434857;">Dashboards</div>
+
+    <h2>Edit</h2>
+</div>
+
+<hr>
+
+<form action="{{ path(routePrefix ~ '.edit', {'id': item.id}) }}" method="POST">
+    {% include viewPath ~ '/form.twig' %}
+    <button class="btn btn-success btn-sm cst-btn">
+        <i class="fa fa-check"></i> Edit
+    </button>
+</form>
+
+{% endblock %}

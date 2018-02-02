@@ -1,0 +1,122 @@
+@import 'compass';
+@import "compass/reset";
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
+
+@import 'variables';
+@import 'mixins';
+
+@import 'lib/button';
+
+header * {@include lc(red, $debug);}
+main * {@include lc(blue, $debug);}
+
+body {
+  @include get-font();
+}
+
+a {
+  color: $bg-secondary;
+  &:hover {
+    color: $bg-secondary-dark;
+    text-decoration: none;
+  }
+}
+
+article {
+  padding-top: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+nav.navbar-dark a.nav-item {
+  color:white;
+  @include link_states_shading();
+}
+
+nav.navbar-light a.nav-item {
+  color:black;
+  @include link_states_shading();
+}
+
+.btn {
+  font-size: inherit;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.alert {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 0;
+  padding: 1rem 1.25rem;
+}
+
+.card-body {
+  padding: .875rem;
+}
+
+.pagination {
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+// Header sizes
+@for $i from 1 through 6 {
+  h#{$i} {
+    color: $bg-primary;
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: (6 - $i) * .2rem + 1rem;
+  }
+}
+
+.color-primary {
+  color: $bg-primary!important;
+  &#{-dark} {color: $bg-primary-dark!important;}
+  &#{-light} {color: $bg-primary-light!important;}
+}
+
+.color-secondary {
+  color: $bg-secondary!important;
+  &#{-dark} {color: $bg-secondary-dark!important;}
+  &#{-light} {color: $bg-secondary-light!important;}
+}
+
+.bg-primary {
+  color: white!important;
+  background-color: $bg-primary!important;
+  &#{-dark} {color: white!important; background-color: $bg-primary-dark!important}
+  &#{-light} {color: white!important; background-color: $bg-primary-light!important}
+}
+
+.bg-secondary {
+  color: white!important;
+  background-color: $bg-secondary!important;
+  &#{-dark} {color: white!important; background-color: $bg-secondary-dark!important}
+  &#{-light} {color: black!important; background-color: $bg-secondary-light!important}
+}
+
+td {
+  height:100%;
+  vertical-align: middle;
+}
+
+.center-align-fix {
+  display:flex;
+  align-items:center;
+}
+
+#login-btn {
+  color: $bg-secondary-dark;
+  &:hover {color: $bg-secondary;}
+  &:focus {background-color: $bg-primary-light}
+}

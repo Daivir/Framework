@@ -1,0 +1,37 @@
+{% extends 'layout.twig' %}
+
+{% block breadcrumb %}
+
+	{% if current_user() == null %}
+		<div class="alert alert-info" role="alert">
+			<i class="zmdi zmdi-info-outline  zmdi-hc-lg zmdi-hc-fw"></i>You need to be connected to order your shopping cart.
+		</div>
+	{% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+	{% include '@cart/cart.twig' %}
+
+	{% if current_user() %}
+		<form action="{{ path('cart.order.summary') }}" method="POST">
+			{{ csrf_input() }}
+			<script
+					src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+					data-key="{{ stripeKey }}"
+					data-amount="{{ cart.price * 100 }}"
+					data-name="Shopping Cart"
+					data-email="{{ current_user().email }}"
+					data-description="Purchase on [Website]"
+					data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+					data-locale="auto"
+					data-zip-code="true"
+					data-currency="eur">
+			</script>
+		</form>
+	{% else %}
+		<a href="{{ path('auth.login') }}" class="btn bg-secondary">Order</a>
+	{% endif %}
+
+{% endblock %}

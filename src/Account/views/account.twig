@@ -1,0 +1,35 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+{% include 'includes/flash.twig' %}
+
+<div class="card mb-3 mt-3">
+    <img class="card-img-top" src="" alt=""/>
+    <div class="card-body">
+        <h4 class="card-title">
+            {{ user.firstname }} {{ user.lastname }}
+        </h4>
+        <p class="card-text">
+            Username: {{ user.username }}<br>
+            Email: {{ user.email }}
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        Personnal informations
+    </div>
+    <div class="card-body">
+    <form action="" method="POST">
+        {{ csrf_input() }}
+        {{ field('firstname', user.firstname, 'First name') }}
+        {{ field('lastname', user.lastname, 'Last name') }}
+        {{ field('password', null, 'Password', {type: 'password'}) }}
+        {{ field('password_confirm', null, 'Confirm password', {type: 'password'}) }}
+        <button>Save</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+// Utilities: Line constructor
+@mixin lc($color, $enable: true) {
+  @if($enable) {
+    outline-offset: -1px;
+    outline: 1px solid $color;
+  }
+}

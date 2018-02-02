@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<a class="navbar-brand" href="{{ path('index') }}">SuperPowers</a>
+	<button class="navbar-toggler border-0"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbar"
+					aria-controls="navbar"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+			<i class="zmdi zmdi-menu"></i>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbar">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item {{ (is_subpath('blog.index') or is_subpath('index')) ? 'active' }}">
+				<a class="nav-link" href="{{ path('blog.index') }}">Blog</a>
+			</li>
+			<li class="nav-item {{ is_subpath('contact') ? 'active' }}">
+				<a class="nav-link" href="{{ path('contact') }}">Contact us</a>
+			</li>
+			<li class="nav-item {{ is_subpath('shop') ? 'active' }}">
+				<a class="nav-link" href="{{ path('shop') }}">Shop</a>
+			</li>
+		</ul>
+		<div class="navbar-nav my-sm-0">
+			{% if module_enabled('cart') %}
+				<div class="nav-item center-align-fix mr-1">
+					<a class="nav-link center-align-fix pr-1" href="{{ path('cart') }}">
+						<i class="zmdi zmdi-shopping-cart zmdi-hc-lg mr-1"></i>
+						Cart
+					</a>
+					<span class="badge bg-secondary">{{ cart_count() }}</span>
+				</div>
+			{% endif %}
+			{% if current_user() %}
+				<ul class="navbar-nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle nav-link"
+							 href="#"
+							 role="button"
+							 id="navbarDropdown"
+							 data-toggle="dropdown"
+							 aria-haspopup="true"
+							 aria-expanded="false">
+							{{ current_user().username }}
+						</a>
+
+						<div class="dropdown-menu dropdown-menu-right mt-2 rounded-0"
+								 aria-labelledby="navbarDropdown">
+							{% if current_user().role == 'admin' %}
+								<h6 class="dropdown-header">Admin</h6>
+								<a class="dropdown-item" href="{{ path('admin') }}">Content manager</a>
+								<div class="dropdown-divider"></div>
+							{% endif %}
+							<a class="dropdown-item" href="{{ path('account') }}">Profile</a>
+							{% if module_enabled('cart') %}
+								<a class="dropdown-item" href="{{ path('cart.orders') }}">Orders</a>
+							{% else %}
+								<a class="dropdown-item" href="{{ path('shop.purchases') }}">Purchases</a>
+							{% endif %}
+							<div class="dropdown-divider"></div>
+							<form class="dropdown-item" method="POST" action="{{ path('auth.logout') }}">
+								{{ csrf_input() }}
+								<button type="submit">Log out</button>
+							</form>
+						</div>
+					</li>
+				</ul>
+			{% else %}
+				<div class="nav-item">
+					<a class="nav-link" id="login-btn" href="{{ path('auth.login') }}">SIGN IN</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</nav>

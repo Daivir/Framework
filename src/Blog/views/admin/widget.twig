@@ -1,0 +1,12 @@
+<div class="col-sm-2">
+    <div class="card">
+        <a href="{{ path('blog.admin.index') }}">
+            <div class="card-block">
+                <p class="card-title">
+                    Post{% if count > 1 %}s{% endif %}
+                </p>
+                <h3 class="card-text">{{ count }}</h3>
+            </div>
+        </a>
+    </div>
+</div>

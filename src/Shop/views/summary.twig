@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+
+{% block title 'Summary' %}
+
+{# TODO: design e-shop (with table) #}
+
+{% block body %}
+    {{ card.brand }} <br>
+    **** **** **** {{ card.last4 }} <br>
+    Name: {{ product.name }} <br>
+    Price: {{ product.price | price_format }}<i class="fa fa-eur"></i><br>
+    VAT: {{ vat | price_format }}% <br>
+    Price VAT: {{ price | price_format }}
+    <form action="{{ path('shop.process', {id: product.id}) }}" method="POST">
+        {{ csrf_input() }}
+        <input type="hidden" name="stripeToken" value="{{ stripeToken }}">
+        <button class="btn btn-success">Pay</button>
+    </form>
+{% endblock %}

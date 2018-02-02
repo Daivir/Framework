@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>{% block title "Title" %}</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/3.0.7/flatpickr.css">
+	<link rel="stylesheet" href="{{ domain }}/assets/css/admin/app.css" media="screen, projection" type="text/css">
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+
+		<header class="col-sm-2">
+			<nav class="nav flex-column">
+				<div class="nav-link">
+					<a href="{{ path('admin') }}">SuperPowers</a>
+				</div>
+				<ul class="nav flex-column">
+					<li>
+						<a href="{{ path('admin') }}" class="nav-link {{ is_subpath('admin') ? 'active' }}">
+							Overview
+						</a>
+					</li>
+					{{ admin_menu() }}
+					<li>
+						<form method="POST" action="{{ path('auth.logout') }}">
+                            {{ csrf_input() }}
+							<button type="submit" class="nav-link">
+								Log Out
+							</button>
+						</form>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main role="main" class="col-md-10">
+
+			{% include 'includes/flash.twig' %}
+
+			{% block body %}{% endblock %}
+		</main>
+
+	</div>
+</div>
+</body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/3.0.7/flatpickr.js"></script>
+<script>
+	flatpickr('.datepicker', {
+		enableTime: true,
+		altInput: true,
+		altFormat: 'j F Y, H:i',
+		dateFormat: 'Y-m-d H:i:S'
+	})
+</script>
+
+</html>
