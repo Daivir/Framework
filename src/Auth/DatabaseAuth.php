@@ -1,11 +1,11 @@
 <?php
 namespace App\Auth;
 
-use Framework\Auth\User as UserInterface;
-use Framework\Session\SessionInterface;
-use Framework\Database\NoRecordException;
+use Virton\Auth\User as UserInterface;
+use Virton\Session\SessionInterface;
+use Virton\Database\NoRecordException;
 
-class DatabaseAuth implements \Framework\Auth
+class DatabaseAuth implements \Virton\Auth
 {
     /**
      * @var UserTable

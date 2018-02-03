@@ -3,7 +3,7 @@ namespace App\Shop\Action;
 
 use App\Shop\Table\ProductTable;
 use App\Shop\Table\PurchaseTable;
-use Framework\Auth;
+use Virton\Auth;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ServerRequestInterface;
 

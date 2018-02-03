@@ -5,12 +5,12 @@ namespace App\Account\Actions;
 use App\Auth\DatabaseAuth;
 use App\Auth\User;
 use App\Auth\UserTable;
-use Framework\Database\Hydrator;
-use Framework\Renderer\RendererInterface;
-use Framework\Response\RedirectResponse;
-use Framework\Router;
-use Framework\Session\FlashHandler;
-use Framework\Validator;
+use Virton\Database\Hydrator;
+use Virton\Renderer\RendererInterface;
+use Virton\Response\RedirectResponse;
+use Virton\Router;
+use Virton\Session\FlashHandler;
+use Virton\Validator;
 use Psr\Http\Message\ServerRequestInterface;
 
 class SignupAction

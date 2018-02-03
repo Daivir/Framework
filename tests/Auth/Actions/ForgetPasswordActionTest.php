@@ -5,9 +5,9 @@ use App\Auth\Actions\ForgetPasswordAction;
 use App\Auth\Mailer\ResetPasswordMailer;
 use App\Auth\User;
 use App\Auth\UserTable;
-use Framework\Database\NoRecordException;
-use Framework\Renderer\RendererInterface;
-use Framework\Session\FlashHandler;
+use Virton\Database\NoRecordException;
+use Virton\Renderer\RendererInterface;
+use Virton\Session\FlashHandler;
 use Prophecy\Argument;
 use Tests\ActionTestCase;
 

@@ -2,7 +2,7 @@
 namespace App\Shop\Table;
 
 use App\Auth\User;
-use Framework\Database\Table;
+use Virton\Database\Table;
 
 class StripeUserTable extends Table
 {

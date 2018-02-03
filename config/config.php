@@ -1,28 +1,28 @@
 <?php
 
-use Framework\Renderer\{
+use Virton\Renderer\{
     RendererInterface,
     TwigRendererFactory
 };
 
-use Framework\Router;
+use Virton\Router;
 
-use Framework\Router\RouterFactory;
+use Virton\Router\RouterFactory;
 
-use Framework\Router\RouterTwigExtension;
+use Virton\Router\RouterTwigExtension;
 
-use Framework\Session\{
+use Virton\Session\{
     PHPSession,
     SessionInterface
 };
 
-use Framework\Twig\{
+use Virton\Twig\{
     CsrfExtension, FlashExtension, FormExtension, ModuleExtension, PagerFantaExtension, PriceExtension, ProgressBarExtension, TextExtension, TimeExtension
 };
 
 use Psr\Container\ContainerInterface;
 
-use Framework\Middleware\{
+use Virton\Middleware\{
     CsrfMiddleware
 };
 
@@ -80,5 +80,5 @@ return [
     // Mailer
     'mail.to' => 'admin@local.dev',
     'mail.from' => 'no-replay@admin.dev',
-    Swift_Mailer::class => factory(\Framework\SwiftMailerFactory::class)
+    Swift_Mailer::class => factory(\Virton\SwiftMailerFactory::class)
 ];

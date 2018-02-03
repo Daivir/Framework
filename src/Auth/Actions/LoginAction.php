@@ -2,7 +2,7 @@
 namespace App\Auth\Actions;
 
 use Psr\Http\Message\ServerRequestInterface;
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 
 
 class LoginAction

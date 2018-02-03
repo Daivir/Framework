@@ -4,7 +4,7 @@ namespace App\Cart;
 use App\{
 	Auth\User, Cart\Table\CartTable, Cart\Table\OrderTable, Shop\Table\StripeUserTable
 };
-use Framework\Api\Stripe;
+use Virton\Api\Stripe;
 use Staaky\VATRates\VATRates;
 use Stripe\Card;
 use Stripe\Customer;

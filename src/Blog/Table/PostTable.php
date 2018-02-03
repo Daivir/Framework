@@ -1,9 +1,9 @@
 <?php
 namespace App\Blog\Table;
 
-use Framework\Database\Table;
+use Virton\Database\Table;
 use App\Blog\Entity\Post;
-use Framework\Database\Query;
+use Virton\Database\Query;
 
 class PostTable extends Table
 {

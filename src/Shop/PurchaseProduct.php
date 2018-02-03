@@ -8,7 +8,7 @@ use App\{
     Shop\Table\PurchaseTable,
     Shop\Table\StripeUserTable
 };
-use Framework\Api\Stripe;
+use Virton\Api\Stripe;
 use Staaky\VATRates\VATRates;
 use Stripe\Card;
 use Stripe\Customer;

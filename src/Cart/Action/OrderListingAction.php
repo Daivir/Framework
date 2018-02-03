@@ -2,8 +2,8 @@
 namespace App\Cart\Action;
 
 use App\Cart\Table\OrderTable;
-use Framework\Auth;
-use Framework\Renderer\RendererInterface;
+use Virton\Auth;
+use Virton\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class OrderListingAction

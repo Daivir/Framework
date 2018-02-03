@@ -4,9 +4,9 @@ namespace App\Shop\Action;
 use App\Shop\Exception\AlreadyPurchasedException;
 use App\Shop\PurchaseProduct;
 use App\Shop\Table\ProductTable;
-use Framework\Auth;
-use Framework\Router;
-use Framework\Session\FlashHandler;
+use Virton\Auth;
+use Virton\Router;
+use Virton\Session\FlashHandler;
 use Psr\Http\Message\ServerRequestInterface;
 
 class PurchaseProcessAction
@@ -32,7 +32,7 @@ class PurchaseProcessAction
      */
     private $table;
 
-    use \Framework\Actions\RouterAwareAction;
+    use \Virton\\Actions\RouterAwareAction;
 
     public function __construct(
         ProductTable $table,

@@ -3,7 +3,7 @@ namespace App\Shop;
 
 use App\Admin\AdminWidgetInterface;
 use App\Shop\Table\ProductTable;
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 
 class ShopWidget implements AdminWidgetInterface
 {

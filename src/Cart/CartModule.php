@@ -1,11 +1,11 @@
 <?php
 namespace App\Cart;
 
-use Framework\Auth\LoggedInMiddleware;
-use Framework\EventManager\EventManager;
-use Framework\Module;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Virton\Auth\LoggedInMiddleware;
+use Virton\EventManager\EventManager;
+use Virton\Module;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
 
 class CartModule extends Module
 {

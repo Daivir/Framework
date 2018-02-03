@@ -5,11 +5,11 @@ use App\Blog\Entity\Post;
 use App\Blog\Table\CategoryTable;
 use App\Blog\Table\PostTable;
 use function DI\string;
-use Framework\Actions\RouterAwareAction;
-use Framework\Database\Hydrator;
+use Virton\Actions\RouterAwareAction;
+use Virton\Database\Hydrator;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
 use GuzzleHttp\Psr7\Response;
 
 class PostIndexAction

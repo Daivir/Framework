@@ -5,10 +5,10 @@ use App\Shop\Entity\Product;
 use App\Shop\Table\ProductTable;
 use App\Shop\Upload\PdfUpload;
 use App\Shop\Upload\ProductImageUpload;
-use Framework\Actions\CrudAction;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
-use Framework\Session\FlashHandler;
+use Virton\Actions\CrudAction;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
+use Virton\Session\FlashHandler;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

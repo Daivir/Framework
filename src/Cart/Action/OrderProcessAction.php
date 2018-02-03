@@ -3,14 +3,14 @@ namespace App\Cart\Action;
 
 use App\Cart\Cart;
 use App\Cart\PurchaseCart;
-use Framework\Auth;
-use Framework\Response\RedirectResponse;
-use Framework\Session\FlashHandler;
+use Virton\Auth;
+use Virton\Response\RedirectResponse;
+use Virton\Session\FlashHandler;
 use Psr\Http\Message\ServerRequestInterface;
 
 class OrderProcessAction
 {
-    use \Framework\Actions\RouterAwareAction;
+    use \Virton\\Actions\RouterAwareAction;
 
     /**
      * @var PurchaseCart

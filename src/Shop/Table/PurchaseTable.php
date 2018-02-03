@@ -4,8 +4,8 @@ namespace App\Shop\Table;
 use App\Auth\User;
 use App\Shop\Entity\Product;
 use App\Shop\Entity\Purchase;
-use Framework\Database\QueryResult;
-use Framework\Database\Table;
+use Virton\Database\QueryResult;
+use Virton\Database\Table;
 
 class PurchaseTable extends Table
 {
@@ -42,7 +42,7 @@ class PurchaseTable extends Table
     /**
      * @param int $purchaseId
      * @return Purchase|null
-     * @throws \Framework\Database\NoRecordException
+     * @throws \Virton\Database\NoRecordException
      */
     public function findWithProduct(int $purchaseId): ?Purchase
     {

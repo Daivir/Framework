@@ -6,9 +6,9 @@ use App\Blog\Actions\CategoryShowAction;
 use App\Blog\Actions\PostCrudAction;
 use App\Blog\Actions\PostIndexAction;
 use App\Blog\Actions\PostShowAction;
-use Framework\Module;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Virton\Module;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
 use Psr\Container\ContainerInterface;
 
 class BlogModule extends Module

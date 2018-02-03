@@ -5,7 +5,7 @@ use Tests\DatabaseTestCase;
 
 use App\Blog\Entity\Post;
 use App\Blog\Table\PostTable;
-use Framework\Database\NoRecordException;
+use Virton\Database\NoRecordException;
 use PDO;
 
 class PostTableTest extends DatabaseTestCase

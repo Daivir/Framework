@@ -4,9 +4,9 @@ namespace Tests\Account\Actions;
 use App\Account\Actions\AccountEditAction;
 use App\Account\User;
 use App\Auth\UserTable;
-use Framework\Auth;
-use Framework\Renderer\RendererInterface;
-use Framework\Session\FlashHandler;
+use Virton\Auth;
+use Virton\Renderer\RendererInterface;
+use Virton\Session\FlashHandler;
 use Prophecy\Argument;
 use Tests\ActionTestCase;
 

@@ -2,11 +2,11 @@
 namespace App\Auth\Actions;
 
 use App\Auth\UserTable;
-use Framework\Renderer\RendererInterface;
-use Framework\Response\RedirectResponse;
-use Framework\Router;
-use Framework\Session\FlashHandler;
-use Framework\Validator;
+use Virton\Renderer\RendererInterface;
+use Virton\Response\RedirectResponse;
+use Virton\Router;
+use Virton\Session\FlashHandler;
+use Virton\Validator;
 use Psr\Http\Message\ServerRequestInterface;
 
 class ResetPasswordAction

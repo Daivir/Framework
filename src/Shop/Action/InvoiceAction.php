@@ -6,9 +6,9 @@ namespace App\Shop\Action;
  */
 
 use App\Shop\Table\PurchaseTable;
-use Framework\Auth;
-use Framework\Auth\ForbiddenException;
-use Framework\Renderer\RendererInterface;
+use Virton\Auth;
+use Virton\Auth\ForbiddenException;
+use Virton\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class InvoiceAction

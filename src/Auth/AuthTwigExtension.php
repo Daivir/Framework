@@ -1,7 +1,7 @@
 <?php
 namespace App\Auth;
 
-use Framework\Auth;
+use Virton\Auth;
 
 
 class AuthTwigExtension extends \Twig_Extension

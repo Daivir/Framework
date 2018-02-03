@@ -5,9 +5,9 @@ use App\Account\Actions\SignupAction;
 use App\Auth\DatabaseAuth;
 use App\Auth\User;
 use App\Auth\UserTable;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
-use Framework\Session\FlashHandler;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
+use Virton\Session\FlashHandler;
 use Prophecy\Argument;
 use Tests\ActionTestCase;
 

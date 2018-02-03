@@ -1,7 +1,7 @@
 <?php
 namespace App\Blog\Entity;
 
-use Framework\Entity\Timestamp;
+use Virton\Entity\Timestamp;
 
 class Post
 {

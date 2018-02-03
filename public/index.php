@@ -9,12 +9,12 @@ use App\{
 	Account\AccountModule, Admin\AdminModule, Auth\AuthModule, Auth\NoRecordMiddleware, Blog\BlogModule, Cart\CartModule, Contact\ContactModule, IndexModule, Shop\ShopModule
 };
 
-use Framework\App;
+use Virton\App;
 
-use Framework\Auth\RoleMiddlewareFactory;
+use Virton\Auth\RoleMiddlewareFactory;
 
 // Middlewares
-use Framework\Middleware\{
+use Virton\Middleware\{
 	CorsMiddleware, CsrfMiddleware, DispatcherMiddleware, MethodMiddleware, NotFoundMiddleware, RendererRequestMiddleware, RouterMiddleware, TrailingSlashMiddleware
 };
 
@@ -44,7 +44,7 @@ $app = (new App(['config/config.php', 'config.php']))
 /** @var \Psr\Container\ContainerInterface $container */
 $container = $app->getContainer();
 
-$router = $container->get(Framework\Router::class);
+$router = $container->get(Virton\Router::class);
 
 // Allow CORS
 $router->options('/{routes:.+}', function (ResponseInterface $response) {

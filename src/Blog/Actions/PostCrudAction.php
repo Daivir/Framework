@@ -5,12 +5,12 @@ use App\Blog\Entity\Post;
 use App\Blog\PostUpload;
 use App\Blog\Table\CategoryTable;
 use App\Blog\Table\PostTable;
-use Framework\Actions\CrudAction;
+use Virton\Actions\CrudAction;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
-use Framework\Session\FlashHandler;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
+use Virton\Session\FlashHandler;
 
 class PostCrudAction extends CrudAction
 {

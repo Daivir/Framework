@@ -8,9 +8,9 @@ use App\Cart\CartRow;
 use App\Cart\Entity\Order;
 use App\Cart\Entity\OrderRow;
 use App\Shop\Entity\Product;
-use Framework\Database\Query;
-use Framework\Database\QueryResult;
-use Framework\Database\Table;
+use Virton\Database\Query;
+use Virton\Database\QueryResult;
+use Virton\Database\Table;
 
 class OrderTable extends Table
 {

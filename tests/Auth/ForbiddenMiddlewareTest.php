@@ -2,9 +2,9 @@
 namespace Tests\App\Auth;
 
 use App\Auth\ForbiddenMiddleware;
-use Framework\Auth\ForbiddenException;
-use Framework\Auth\User;
-use Framework\Session\ArraySession;
+use Virton\Auth\ForbiddenException;
+use Virton\Auth\User;
+use Virton\Session\ArraySession;
 use Psr\Http\Server\RequestHandlerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
@@ -14,7 +14,7 @@ use Psr\Http\Message\UriInterface;
 class ForbiddenMiddlewareTest extends TestCase
 {
     /**
-     * @var \Framework\Session\SessionInterface
+     * @var \Virton\Session\SessionInterface
      */
     private $session;
 

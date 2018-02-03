@@ -2,10 +2,10 @@
 namespace App\Auth\Actions;
 
 use Psr\Http\Message\ServerRequestInterface;
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 use App\Auth\DatabaseAuth;
-use Framework\Response\RedirectResponse;
-use Framework\Session\FlashHandler;
+use Virton\Response\RedirectResponse;
+use Virton\Session\FlashHandler;
 
 
 class LogoutAction

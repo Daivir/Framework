@@ -10,8 +10,8 @@ use App\Cart\CartRow;
 use App\Cart\Entity\Cart as CartEntity;
 use App\Shop\Entity\Product;
 use App\Shop\Table\ProductTable;
-use Framework\Database\Hydrator;
-use Framework\Database\Table;
+use Virton\Database\Hydrator;
+use Virton\Database\Table;
 
 class CartTable extends Table
 {

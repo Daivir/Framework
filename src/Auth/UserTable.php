@@ -2,7 +2,7 @@
 namespace App\Auth;
 
 use App\Auth\User;
-use Framework\Database\Table;
+use Virton\Database\Table;
 use Ramsey\Uuid\Uuid;
 
 class UserTable extends Table

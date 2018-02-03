@@ -1,7 +1,7 @@
 <?php
 namespace App\Shop\Entity;
 
-use Framework\Entity\Timestamp;
+use Virton\Entity\Timestamp;
 
 class Product
 {

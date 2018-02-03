@@ -1,9 +1,9 @@
 <?php
 namespace App\Contact;
 
-use Framework\Module;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Virton\Module;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
 
 /**
  * Class ContactModule

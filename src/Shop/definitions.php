@@ -2,7 +2,7 @@
 
 use App\Shop\ShopWidget;
 use App\Shop\Action\ProductShowAction;
-use Framework\Api\Stripe;
+use Virton\Api\Stripe;
 
 use function \DI\{add, get, object};
 

@@ -2,8 +2,8 @@
 namespace App\Shop\Action;
 
 use App\Shop\Table\ProductTable;
-use Framework\Api\Stripe;
-use Framework\Renderer\RendererInterface;
+use Virton\Api\Stripe;
+use Virton\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Staaky\VATRates\VATRates;
 

@@ -2,13 +2,13 @@
 namespace App\Auth;
 
 use App\Auth\Actions\ResetPasswordAction;
-use Framework\Module;
+use Virton\Module;
 use Psr\Container\ContainerInterface;
 use App\Auth\Actions\LoginAction;
 use App\Auth\Actions\LoginAttemptAction;
 use App\Auth\Actions\ForgetPasswordAction;
-use Framework\Router;
-use Framework\Renderer\RendererInterface;
+use Virton\Router;
+use Virton\Renderer\RendererInterface;
 use App\Auth\Actions\LogoutAction;
 
 class AuthModule extends Module

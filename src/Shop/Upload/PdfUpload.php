@@ -1,7 +1,7 @@
 <?php
 namespace App\Shop\Upload;
 
-use Framework\Upload;
+use Virton\Upload;
 
 class PdfUpload extends Upload
 {

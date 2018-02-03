@@ -4,8 +4,8 @@ namespace App\Blog\Actions;
 use App\Blog\Table\CategoryTable;
 use App\Blog\Table\PostTable;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
 use GuzzleHttp\Psr7\Response;
 
 class PostShowAction
@@ -14,7 +14,7 @@ class PostShowAction
 	private $router;
 	private $postTable;
 
-	use \Framework\Actions\RouterAwareAction;
+	use \Virton\Actions\RouterAwareAction;
 
 	public function __construct(RendererInterface $renderer, Router $router, PostTable $postTable)
 	{

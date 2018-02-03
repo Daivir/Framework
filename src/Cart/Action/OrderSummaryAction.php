@@ -3,8 +3,8 @@ namespace App\Cart\Action;
 
 use App\Cart\Cart;
 use App\Cart\Table\CartTable;
-use Framework\Api\Stripe;
-use Framework\Renderer\RendererInterface;
+use Virton\Api\Stripe;
+use Virton\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Staaky\VATRates\VATRates;
 

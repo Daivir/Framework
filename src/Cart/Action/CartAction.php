@@ -5,8 +5,8 @@ namespace App\Cart\Action;
 use App\Cart\Cart;
 use App\Cart\Table\CartTable;
 use App\Shop\Table\ProductTable;
-use Framework\Renderer\RendererInterface;
-use Framework\Response\RedirectBackResponse;
+use Virton\Renderer\RendererInterface;
+use Virton\Response\RedirectBackResponse;
 use Psr\Http\Message\ServerRequestInterface;
 
 class CartAction

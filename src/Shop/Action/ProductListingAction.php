@@ -2,7 +2,7 @@
 namespace App\Shop\Action;
 
 use App\Shop\Table\ProductTable;
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class ProductListingAction

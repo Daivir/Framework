@@ -2,11 +2,11 @@
 namespace App\Account\Actions;
 
 use App\Auth\UserTable;
-use Framework\Auth;
-use Framework\Renderer\RendererInterface;
-use Framework\Response\RedirectResponse;
-use Framework\Session\FlashHandler;
-use Framework\Validator;
+use Virton\Auth;
+use Virton\Renderer\RendererInterface;
+use Virton\Response\RedirectResponse;
+use Virton\Session\FlashHandler;
+use Virton\Validator;
 use Psr\Http\Message\ServerRequestInterface;
 
 class AccountEditAction

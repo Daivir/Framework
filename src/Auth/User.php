@@ -1,7 +1,7 @@
 <?php
 namespace App\Auth;
 
-class User implements \Framework\Auth\User
+class User implements \Virton\Auth\User
 {
     /**
      * @var int

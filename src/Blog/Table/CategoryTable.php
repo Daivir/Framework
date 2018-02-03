@@ -2,9 +2,9 @@
 namespace App\Blog\Table;
 
 use App\Blog\Entity\Category;
-use Framework\Database\Query;
-use Framework\Database\QueryResult;
-use Framework\Database\Table;
+use Virton\Database\Query;
+use Virton\Database\QueryResult;
+use Virton\Database\Table;
 
 /**
  * Class CategoryTable.

@@ -1,10 +1,10 @@
 <?php
 namespace App\Admin;
 
-use Framework\Module;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
-use Framework\Renderer\TwigRenderer;
+use Virton\Module;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
+use Virton\Renderer\TwigRenderer;
 
 class AdminModule extends Module
 {

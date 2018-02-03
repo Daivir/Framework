@@ -4,7 +4,7 @@ namespace App\Cart;
 use App\Admin\AdminWidgetInterface;
 use App\Cart\Table\OrderTable;
 use App\Shop\Table\ProductTable;
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 
 class CartWidget implements AdminWidgetInterface
 {

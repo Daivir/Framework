@@ -2,7 +2,7 @@
 namespace App\Cart\Table;
 
 use App\Cart\CartRow;
-use Framework\Database\Table;
+use Virton\Database\Table;
 
 class CartRowTable extends Table
 {

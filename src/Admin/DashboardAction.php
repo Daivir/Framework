@@ -3,7 +3,7 @@ namespace App\Admin;
 
 use App\Admin\AdminWidgetInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 
 class DashboardAction
 {

@@ -2,8 +2,8 @@
 namespace Tests\App\Blog\Actions;
 
 use App\Blog\Table\PostTable;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
 use GuzzleHttp\Psr7\ServerRequest;
 use PHPUnit\Framework\TestCase;
 use App\Blog\Actions\PostShowAction;

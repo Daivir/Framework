@@ -1,7 +1,7 @@
 <?php
 namespace App\Blog;
 
-use Framework\Upload;
+use Virton\Upload;
 
 class PostUpload extends Upload
 {

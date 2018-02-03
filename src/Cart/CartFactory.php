@@ -3,7 +3,7 @@ namespace App\Cart;
 
 use App\Auth\User;
 use App\Cart\Table\CartTable;
-use Framework\Auth;
+use Virton\Auth;
 use Psr\Container\ContainerInterface;
 
 class CartFactory

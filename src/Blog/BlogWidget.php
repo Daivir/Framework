@@ -2,7 +2,7 @@
 namespace App\Blog;
 
 use App\Admin\AdminWidgetInterface;
-use \Framework\Renderer\RendererInterface;
+use \Virton\Renderer\RendererInterface;
 use App\Blog\Table\PostTable;
 
 class BlogWidget implements AdminWidgetInterface

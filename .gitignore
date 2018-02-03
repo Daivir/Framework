@@ -2,7 +2,6 @@
 composer.lock
 public/uploads
 public/downloads
-views/dev
 tmp
 vendor
 /config.php

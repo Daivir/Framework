@@ -2,7 +2,7 @@
 namespace App\Cart;
 
 use App\Shop\Entity\Product;
-use Framework\Session\SessionInterface;
+use Virton\Session\SessionInterface;
 
 class SessionCart extends Cart
 {

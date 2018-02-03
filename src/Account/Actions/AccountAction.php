@@ -1,8 +1,8 @@
 <?php
 namespace App\Account\Actions;
 
-use Framework\Auth;
-use Framework\Renderer\RendererInterface;
+use Virton\Auth;
+use Virton\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class AccountAction

@@ -3,8 +3,8 @@ namespace App\Shop\Action;
 
 use App\Shop\Table\ProductTable;
 use App\Shop\Table\PurchaseTable;
-use Framework\Auth;
-use Framework\Renderer\RendererInterface;
+use Virton\Auth;
+use Virton\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class ProductShowAction

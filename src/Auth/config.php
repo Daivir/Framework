@@ -3,7 +3,7 @@
 use App\Auth\{
 	DatabaseAuth, ForbiddenMiddleware, Mailer\ResetPasswordMailer, NoRecordMiddleware, UserTable
 };
-use Framework\Auth;
+use Virton\Auth;
 use function DI\{
     add,
     object,

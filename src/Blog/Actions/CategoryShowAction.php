@@ -2,7 +2,7 @@
 namespace App\Blog\Actions;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Framework\Renderer\RendererInterface as Renderer;
+use Virton\Renderer\RendererInterface as Renderer;
 use App\Blog\Table\PostTable;
 use App\Blog\Table\CategoryTable;
 
@@ -12,7 +12,7 @@ class CategoryShowAction
 	private $postTable;
 	private $categoryTable;
 
-	use \Framework\Actions\RouterAwareAction;
+	use \Virton\Actions\RouterAwareAction;
 
 	public function __construct(Renderer $renderer, PostTable $postTable, CategoryTable $categoryTable)
 	{
@@ -24,7 +24,6 @@ class CategoryShowAction
     /**
      * @param Request $request
      * @return string
-     * @throws \Framework\Database\NoRecordException
      */
 	public function __invoke(Request $request)
 	{

@@ -1,14 +1,14 @@
 <?php
 namespace App\Auth;
 
-use Framework\Database\NoRecordException;
+use Virton\Database\NoRecordException;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
-use Framework\Response\RedirectResponse;
-use Framework\Session\SessionInterface;
-use Framework\Session\FlashHandler;
+use Virton\Response\RedirectResponse;
+use Virton\Session\SessionInterface;
+use Virton\Session\FlashHandler;
 
 class NoRecordMiddleware implements MiddlewareInterface
 {

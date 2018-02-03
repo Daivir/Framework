@@ -5,10 +5,10 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
-use Framework\Auth\ForbiddenException;
-use Framework\Response\RedirectResponse;
-use Framework\Session\SessionInterface;
-use Framework\Session\FlashHandler;
+use Virton\Auth\ForbiddenException;
+use Virton\Response\RedirectResponse;
+use Virton\Session\SessionInterface;
+use Virton\Session\FlashHandler;
 
 class ForbiddenMiddleware implements MiddlewareInterface
 {
@@ -41,7 +41,7 @@ class ForbiddenMiddleware implements MiddlewareInterface
         } catch (ForbiddenException $e) {
             return $this->redirectLogin($request);
         } catch (\TypeError $e) {
-            if (strpos($e->getMessage(), \Framework\Auth\User::class) !== false) {
+            if (strpos($e->getMessage(), \Virton\Auth\User::class) !== false) {
                 return $this->redirectLogin($request);
             }
             throw $e;

@@ -1,10 +1,10 @@
 <?php
 namespace App\Account;
 
-use Framework\Auth\LoggedInMiddleware;
-use Framework\Module;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Virton\Auth\LoggedInMiddleware;
+use Virton\Module;
+use Virton\Renderer\RendererInterface;
+use Virton\Router;
 
 class AccountModule extends Module
 {

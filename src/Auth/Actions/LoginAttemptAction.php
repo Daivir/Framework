@@ -2,15 +2,15 @@
 namespace App\Auth\Actions;
 
 use App\Auth\Event\LoginEvent;
-use Framework\EventManager\EventManager;
+use Virton\EventManager\EventManager;
 use Psr\Http\Message\ServerRequestInterface;
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 use App\Auth\DatabaseAuth;
-use Framework\Router;
-use Framework\Session\SessionInterface;
-use Framework\Session\FlashHandler;
-use Framework\Actions\RouterAwareAction;
-use Framework\Response\RedirectResponse;
+use Virton\Router;
+use Virton\Session\SessionInterface;
+use Virton\Session\FlashHandler;
+use Virton\Actions\RouterAwareAction;
+use Virton\Response\RedirectResponse;
 
 class LoginAttemptAction
 {

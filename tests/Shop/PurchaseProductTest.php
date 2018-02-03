@@ -10,7 +10,7 @@ use App\Shop\{
     Table\PurchaseTable,
     Table\StripeUserTable
 };
-use Framework\Api\Stripe;
+use Virton\Api\Stripe;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Stripe\{

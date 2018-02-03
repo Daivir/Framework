@@ -2,9 +2,9 @@
 namespace Tests\App\Contact;
 
 use App\Contact\ContactAction;
-use Framework\Renderer\RendererInterface;
-use Framework\Response\RedirectResponse;
-use Framework\Session\FlashHandler;
+use Virton\Renderer\RendererInterface;
+use Virton\Response\RedirectResponse;
+use Virton\Session\FlashHandler;
 use Tests\ActionTestCase;
 
 class ContactActionTest extends ActionTestCase

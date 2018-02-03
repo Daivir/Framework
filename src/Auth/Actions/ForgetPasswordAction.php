@@ -3,11 +3,11 @@ namespace App\Auth\Actions;
 
 use App\Auth\Mailer\ResetPasswordMailer;
 use App\Auth\UserTable;
-use Framework\Database\NoRecordException;
-use Framework\Renderer\RendererInterface;
-use Framework\Response\RedirectResponse;
-use Framework\Session\FlashHandler;
-use Framework\Validator;
+use Virton\Database\NoRecordException;
+use Virton\Renderer\RendererInterface;
+use Virton\Response\RedirectResponse;
+use Virton\Session\FlashHandler;
+use Virton\Validator;
 use Psr\Http\Message\ServerRequestInterface;
 
 class ForgetPasswordAction

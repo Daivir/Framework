@@ -1,7 +1,7 @@
 <?php
 namespace App\Auth\Mailer;
 
-use Framework\Renderer\RendererInterface;
+use Virton\Renderer\RendererInterface;
 
 // TODO: Create Test class
 

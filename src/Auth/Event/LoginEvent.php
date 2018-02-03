@@ -2,7 +2,7 @@
 namespace App\Auth\Event;
 
 use App\Auth\User;
-use Framework\EventManager\Event;
+use Virton\EventManager\Event;
 
 class LoginEvent extends Event
 {

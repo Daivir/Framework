@@ -2,7 +2,7 @@
 namespace App\Cart\Table;
 
 use App\Cart\Entity\OrderRow;
-use Framework\Database\Table;
+use Virton\Database\Table;
 
 class OrderRowTable extends Table
 {
