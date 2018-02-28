@@ -17,7 +17,15 @@ use Virton\Session\{
 };
 
 use Virton\Twig\{
-    CsrfExtension, FlashExtension, FormExtension, ModuleExtension, PagerFantaExtension, PriceExtension, ProgressBarExtension, TextExtension, TimeExtension
+    CsrfExtension,
+	FlashExtension,
+	FormExtension,
+	ModuleExtension,
+	PagerFantaExtension,
+	PriceExtension,
+	ProgressBarExtension,
+	TextExtension,
+	TimeExtension
 };
 
 use Psr\Container\ContainerInterface;

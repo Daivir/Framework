@@ -8,21 +8,34 @@
   ],
   "autoload": {
     "psr-4": {
-      "App\\": "src",
+      "App\\": "app",
+      "Virton\\": "src/Virton",
+      "Psr\\": "src/Psr",
       "Tests\\": "tests"
     }
   },
   "minimum-stability": "stable",
   "require": {
+    "doctrine/cache": "^1.7",
+    "guzzlehttp/guzzle": "^6.3",
+    "http-interop/response-sender": "^1.0",
+    "intervention/image": "^2.4",
+    "pagerfanta/pagerfanta": "^1.0",
+    "php-di/php-di": "^5.4",
+    "psr/container": "^1.0",
+    "psr/http-server-middleware": "^1.0",
     "ramsey/uuid": "^3.7",
     "staaky/vatrates": "^2.0",
-    "daivir/virton": "@dev"
+    "stripe/stripe-php": "^5.8",
+    "swiftmailer/swiftmailer": "^6.0",
+    "twig/twig": "^2.4",
+    "zendframework/zend-expressive-fastroute": "^2.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^6.3",
-    "squizlabs/php_codesniffer": "^3.0",
-    "robmorgan/phinx": "@dev",
     "fzaninotto/faker": "^1.7",
-    "middlewares/whoops": "^1.0.0"
+    "middlewares/whoops": "^1.0.0",
+    "phpunit/phpunit": "^6.3",
+    "robmorgan/phinx": "@dev",
+    "squizlabs/php_codesniffer": "^3.0"
   }
 }

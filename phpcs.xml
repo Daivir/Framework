@@ -7,11 +7,12 @@
 	<arg value="p"/>
 
 	<file>public</file>
-	<file>src</file>
+	<file>app</file>
 	<file>tests</file>
 
-	<exclude-pattern>*/test.php</exclude-pattern>
 	<exclude-pattern>*.css</exclude-pattern>
+	<exclude-pattern>*.js</exclude-pattern>
+	<exclude-pattern>adminer-4.5.0-mysql-en.php</exclude-pattern>
     
 	<rule ref="PSR2">
 		<exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>

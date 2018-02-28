@@ -1,12 +1,17 @@
-.sass-cache
+node_modules/
+public/dist/
+config.php
+config/config.php
+package-lock.json
 composer.lock
-public/uploads
-public/downloads
-tmp
-vendor
-/config.php
-/test.html
 composer.phar
 
 # For Macintosh users
 .DS_Store
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

@@ -18,11 +18,8 @@
 
 	<filter>
 		<whitelist addUncoveredFilesFromWhitelist="false">
-			<directory>src</directory>
+			<directory>app</directory>
 		</whitelist>
-		<blacklist>
-			<directory>src/Api</directory>
-		</blacklist>
 	</filter>
 
 </phpunit>
