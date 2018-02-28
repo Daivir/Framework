@@ -5,6 +5,7 @@ config/config.php
 package-lock.json
 composer.lock
 composer.phar
+vendor
 
 # For Macintosh users
 .DS_Store
